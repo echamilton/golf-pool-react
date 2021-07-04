@@ -1,7 +1,7 @@
 function LeaderBoard() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>Leaderboard</h2>
     </div>
   );
 }

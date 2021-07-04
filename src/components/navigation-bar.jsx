@@ -40,7 +40,7 @@ export default function MenuAppBar() {
   };
 
   const handleRefresh = (event) => {
-    console.log("refresh clicked");
+    console.log("refresh clicked", event);
   };
 
   const handleClose = () => {
