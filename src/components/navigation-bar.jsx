@@ -117,7 +117,7 @@ export default function MenuAppBar() {
                 <MenuItem component={Link} to="/sign-up" onClick={handleClose}>
                   Sign Up
                 </MenuItem>
-                <MenuItem component={Link} to="/login" onClick={handleClose}>
+                <MenuItem component={Link} to="/reset" onClick={handleClose}>
                   Reset Password
                 </MenuItem>
               </Menu>

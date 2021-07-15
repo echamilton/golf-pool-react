@@ -1,8 +1,9 @@
 import React from "react";
-import { GetGolfScores } from "../services/espn-tournament-rest";
+import { getGolfScores } from "../services/espn-tournament-rest";
 import { connect } from "react-redux";
 import "./../styles/tournament-leaders.css";
 import { loadTournamentData } from "./../redux/actions";
+import { login } from "./../services/firebase-auth";
 
 class TournamentLeaders extends React.Component {
   constructor(props) {
@@ -14,7 +15,16 @@ class TournamentLeaders extends React.Component {
 
   async componentDidMount() {
     this.props.loadTournamentData();
-    this.setState({ golferData: await GetGolfScores() });
+
+    login("evanchamilton@gmail.com", "Calder8478")
+      .then((x) => {
+        console.log(x);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    this.setState({ golferData: await getGolfScores() });
   }
 
   render() {

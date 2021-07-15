@@ -1,16 +1,20 @@
 import axios from "axios";
-import { getActiveEventId } from "./config";
+import {
+  getActiveEventId,
+  getTournamentResultsEndpoint,
+} from "./tournament-config";
 import * as golfConstants from "../models/constants";
 
-export async function GetGolfScores() {
+export async function getGolfScores() {
   return new Promise(function (resolove, reject) {
     axios
-      .get(
-        `https://site.web.api.espn.com/apis/site/v2/sports/golf/leaderboard?event=401243414`
-      )
+      .get(getTournamentResultsEndpoint())
       .then((res) => {
-        const testdata = buildGolferScores(res.data.events[0]);
-        resolove(testdata);
+        resolove(buildGolferScores(res.data.events[0]));
+      })
+      .catch((error) => {
+        console.error("Error calling espn api for tournament results");
+        reject(error);
       });
   });
 }

@@ -6,6 +6,8 @@ import PickTeam from "./components/pick-team";
 import LeaderBoard from "./components/leaderboard";
 import TournamentLeaders from "./components/tournament-leaders";
 import SignUp from "./components/sign-up";
+import Login from "./components/login";
+import PasswordReset from "./components/pwd-reset";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
         </Route>
         <Route path="/sign-up">
           <SignUp />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/reset">
+          <PasswordReset />
         </Route>
       </Switch>
     </Router>

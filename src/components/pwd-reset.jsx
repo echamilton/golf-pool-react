@@ -7,20 +7,13 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import "./../styles/sign-up.css";
 
-export default function SignUp() {
+export default function PasswordReset() {
   return (
     <Card className="card-info" variant="outlined">
-      <CardHeader title="Sign Up" style={{ textAlign: "center" }} />
+      <CardHeader title="Reset Password" style={{ textAlign: "center" }} />
       <CardContent>
         <form noValidate autoComplete="off">
           <TextField className="field" required id="email" label="Email" />
-          <TextField
-            className="field"
-            required
-            id="password"
-            label="Password"
-            type="password"
-          />
         </form>
       </CardContent>
       <CardActions>
