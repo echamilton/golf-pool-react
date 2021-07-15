@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontWeight: 600,
   },
 }));
 
 export default function MenuAppBar() {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -54,7 +54,7 @@ export default function MenuAppBar() {
           <Typography variant="h6" className={classes.title}>
             443 Fantasy Golf
           </Typography>
-          {auth && (
+          {
             <div>
               <IconButton
                 aria-label="refresh golf scores"
@@ -111,11 +111,18 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem component={Link} to="/login" onClick={handleClose}>
+                  Login
+                </MenuItem>
+                <MenuItem component={Link} to="/sign-up" onClick={handleClose}>
+                  Sign Up
+                </MenuItem>
+                <MenuItem component={Link} to="/login" onClick={handleClose}>
+                  Reset Password
+                </MenuItem>
               </Menu>
             </div>
-          )}
+          }
         </Toolbar>
       </AppBar>
     </div>

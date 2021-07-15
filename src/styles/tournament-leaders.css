@@ -1,0 +1,27 @@
+.card {
+  display: inline-block;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+}
+.golfer-pic {
+  width: 65px;
+  height: 45px;
+  margin: auto;
+}
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.error-text {
+  text-align: center;
+  margin-left: 5em;
+  font-size: 14px;
+}
+.scrolling-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

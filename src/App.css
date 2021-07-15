@@ -1,0 +1,19 @@
+li {
+  list-style-type: none;
+}
+
+.leaders {
+  height: 85px;
+  background: black;
+  color: #e4e4e4;
+  font: 500 12px/14px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
