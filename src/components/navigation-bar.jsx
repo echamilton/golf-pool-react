@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -11,22 +10,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Link } from "react-router-dom";
-
-const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-  },
-  icon: {
-    padding: "5px",
-  },
-  appBar: {
-    backgroundColor: "#3598b6",
-  },
-  title: {
-    flexGrow: 1,
-    fontWeight: 600,
-  },
-}));
+import { useStyles } from "./../styles/navigation-bar";
 
 export default function MenuAppBar() {
   const classes = useStyles();
