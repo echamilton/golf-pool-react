@@ -12,12 +12,12 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  icon: {
+    padding: "5px",
   },
   appBar: {
     backgroundColor: "#3598b6",
@@ -52,75 +52,75 @@ export default function MenuAppBar() {
           <Typography variant="h6" className={classes.title}>
             443 Fantasy Golf
           </Typography>
-          {
-            <div>
-              <IconButton
-                aria-label="refresh golf scores"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleRefresh}
-                component={Link}
-                to="/leaderboard"
-                color="inherit"
-              >
-                <RefreshIcon />
-              </IconButton>
-              <IconButton
-                aria-label="navigate to dashboard"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                component={Link}
-                to="/leaderboard"
-                color="inherit"
-              >
-                <GolfCourseIcon />
-              </IconButton>
-              <IconButton
-                aria-label="navigate to user picks"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                component={Link}
-                to="/picks"
-                color="inherit"
-              >
-                <EditIcon />
-              </IconButton>
-              <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={open}
-                onClose={handleClose}
-              >
-                <MenuItem component={Link} to="/login" onClick={handleClose}>
-                  Login
-                </MenuItem>
-                <MenuItem component={Link} to="/sign-up" onClick={handleClose}>
-                  Sign Up
-                </MenuItem>
-                <MenuItem component={Link} to="/reset" onClick={handleClose}>
-                  Reset Password
-                </MenuItem>
-              </Menu>
-            </div>
-          }
+          <IconButton
+            className={classes.icon}
+            aria-label="refresh golf scores"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleRefresh}
+            component={Link}
+            to="/leaderboard"
+            color="inherit"
+          >
+            <RefreshIcon />
+          </IconButton>
+          <IconButton
+            className={classes.icon}
+            aria-label="navigate to dashboard"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            component={Link}
+            to="/leaderboard"
+            color="inherit"
+          >
+            <GolfCourseIcon />
+          </IconButton>
+          <IconButton
+            className={classes.icon}
+            aria-label="navigate to user picks"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            component={Link}
+            to="/picks"
+            color="inherit"
+          >
+            <EditIcon />
+          </IconButton>
+          <IconButton
+            className={classes.icon}
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            open={open}
+            onClose={handleClose}
+          >
+            <MenuItem component={Link} to="/login" onClick={handleClose}>
+              Login
+            </MenuItem>
+            <MenuItem component={Link} to="/sign-up" onClick={handleClose}>
+              Sign Up
+            </MenuItem>
+            <MenuItem component={Link} to="/reset" onClick={handleClose}>
+              Reset Password
+            </MenuItem>
+          </Menu>
         </Toolbar>
       </AppBar>
     </div>

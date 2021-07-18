@@ -7,11 +7,15 @@ export const useStyles = makeStyles({
     "@media (min-width: 780px)": {
       width: "50%",
     },
+    marginTop: "36px",
   },
   card: {
     maxWidth: "50%",
     display: "flex",
     alignItems: "center",
+  },
+  cardHeader: {
+    textAlign: "center",
   },
   cardContent: {
     display: "flex",

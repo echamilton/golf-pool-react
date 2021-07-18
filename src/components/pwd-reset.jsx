@@ -7,11 +7,12 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { useStyles } from "./../styles/user-auth-styles";
 
-export default function PasswordReset() {
+const PasswordReset = () => {
   const classes = useStyles();
+
   return (
     <Card className={classes.root} variant="outlined">
-      <CardHeader title="Reset Password" style={{ textAlign: "center" }} />
+      <CardHeader title="Reset Password" className={classes.cardHeader} />
       <CardContent className={classes.cardContent}>
         <form noValidate autoComplete="off">
           <TextField
@@ -32,4 +33,6 @@ export default function PasswordReset() {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default PasswordReset;

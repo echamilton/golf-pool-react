@@ -7,11 +7,12 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { useStyles } from "./../styles/user-auth-styles";
 
-export default function SignUp() {
+const SignUp = () => {
   const classes = useStyles();
+
   return (
     <Card className={classes.root} variant="outlined">
-      <CardHeader title="Sign Up" style={{ textAlign: "center" }} />
+      <CardHeader title="Sign Up" className={classes.cardHeader} />
       <CardContent className={classes.cardContent}>
         <form noValidate autoComplete="off">
           <TextField
@@ -52,4 +53,6 @@ export default function SignUp() {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default SignUp;
