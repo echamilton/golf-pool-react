@@ -5,21 +5,30 @@ import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import "./../styles/sign-up.css";
+import { useStyles } from "./../styles/user-auth-styles";
 
 export default function PasswordReset() {
+  const classes = useStyles();
   return (
-    <Card className="card-info" variant="outlined">
+    <Card className={classes.root} variant="outlined">
       <CardHeader title="Reset Password" style={{ textAlign: "center" }} />
-      <CardContent>
+      <CardContent className={classes.cardContent}>
         <form noValidate autoComplete="off">
-          <TextField className="field" required id="email" label="Email" />
+          <TextField
+            className={classes.inputField}
+            required
+            id="email"
+            label="Email"
+            InputProps={{
+              className: classes.input,
+            }}
+          />
         </form>
       </CardContent>
-      <CardActions>
+      <CardActions className={classes.cardactions}>
         <Button variant="contained" color="primary">
-          Sign Up
-        </Button>{" "}
+          Submit
+        </Button>
       </CardActions>
     </Card>
   );

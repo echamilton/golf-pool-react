@@ -16,13 +16,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  palette: {
-    primary: {
-      contrastText: "rgba(0,0,0,0.8)",
-    },
-  },
   menuButton: {
     marginRight: theme.spacing(2),
+  },
+  appBar: {
+    backgroundColor: "#3598b6",
   },
   title: {
     flexGrow: 1,
@@ -49,7 +47,7 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             443 Fantasy Golf

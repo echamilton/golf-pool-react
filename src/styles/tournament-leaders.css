@@ -12,6 +12,7 @@
 .text {
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 600;
 }
 .error-text {
   text-align: center;
@@ -25,4 +26,7 @@
   text-align: center;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
