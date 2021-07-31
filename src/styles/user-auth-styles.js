@@ -27,6 +27,7 @@ export const useStyles = makeStyles({
   },
   inputField: {
     display: "block",
+    justifyContent: "center",
   },
   input: {
     marginBottom: "16px",
