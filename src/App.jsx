@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router";
 import "./App.css";
 import NavigationBar from "./components/navigation-bar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -18,7 +19,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/">
-          <LeaderBoard />
+          <Redirect to="/leaderboard" />
         </Route>
         <Route path="/picks">
           <PickTeam />
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/reset">
           <PasswordReset />
+        </Route>
+        <Route path="*">
+          <Redirect to="/leaderboard" />
         </Route>
       </Switch>
     </Router>
